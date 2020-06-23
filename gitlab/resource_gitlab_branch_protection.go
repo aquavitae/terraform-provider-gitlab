@@ -25,6 +25,9 @@ func resourceGitlabBranchProtection() *schema.Resource {
 		Read:   resourceGitlabBranchProtectionRead,
 		Update: resourceGitlabBranchProtectionUpdate,
 		Delete: resourceGitlabBranchProtectionDelete,
+		Importer: &schema.ResourceImporter{
+			State: schema.ImportStatePassthrough,
+		},
 		Schema: map[string]*schema.Schema{
 			"project": {
 				Type:     schema.TypeString,

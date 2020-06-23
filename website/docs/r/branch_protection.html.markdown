@@ -58,3 +58,9 @@ The following arguments are supported:
 * `allowed_to_unprotect` - (Optional; conflicts with unprotect_access_level) GitLab EE Only - Map of user ids, group ids, and access levels to grant access.  At least one of user_id, group_id, or access_level must be defined.
 
 * `code_owner_approval_required` - (Optional) GitLab EE Only - True or false.  Defaults to false.
+
+## Importing branch protection
+
+GitLab project group shares can be imported using an id made up of `projectid:branch`, e.g.
+
+    terraform import gitlab_project.example 1337:master
